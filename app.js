@@ -1,5 +1,5 @@
 // Function to find average of all students
-function avg(array) {
+function average(array) {
   var sumOfMarks = 0;
   for(var i = 0; i < array.length; i++) {
       sumOfMarks += array[i].grade;
@@ -30,7 +30,7 @@ function failingStudents(array) {
 
 
 
-function checkGrade(student) {
+function checkingGrade(student) {
     return student.grade >= 0;
 }
 
@@ -60,22 +60,53 @@ var students = [
   {
     name: "student 5",
     DOB: "11/15/2001",
-    grade: 81
+    grade: 80
+  },
+  {
+    name: "student 6",
+    DOB: "04/06/1998",
+    grade: 92
+  },
+  {
+    name: "student 7",
+    DOB: "02/19/1997",
+    grade: 70
+  },
+  {
+    name: "student 8",
+    DOB: "12/20/2002",
+    grade: 32
+  },
+  {
+    name: "student 9",
+    DOB: "08/29/1999",
+    grade: 85
+  },
+  {
+    name: "student 10",
+    DOB: "11/15/2001",
+    grade: 73
   }
 ];
 
+// Calling array of students
+console.log(students);
 
-var studentAvg = avg(students);
+// Calling Class Average
+var studentAvg = average(students);
 console.log("The class average is " + studentAvg);
 
+// Calling passing students
 var passedStudents = passingStudents(students);
 //console.log(passedStudents);
 console.log("The number of students passing is: " + passedStudents.length);
 
+// Calling failing students
 var failedStudents = failingStudents(students);
-console.log(failedStudents);
+//console.log(failedStudents);
 console.log("The number of students failing is: " + failedStudents.length);
 
-//var passed = students.filter(checkGrade);
+//Checking Grades
+//var passed = students.filter(checkingGrade);
 //console.log(passed);
 
